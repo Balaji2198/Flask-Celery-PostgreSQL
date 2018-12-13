@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Youtube Video Statistics{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <h1>Video List</h1>
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Video_Id</th>
+    <th>Channel_ID</th>
+    <th>Comment_Count</th>
+    <th>Dislike_Count</th>
+    <th>Favorite_Count</th>
+    <th>Like_Count</th>
+    <th>View_Count</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>{{ video.video_id }}</td>
+    <td>{{ video.channel_id }}</td>
+    <td>{{ video.comment_count }}</td>
+    <td>{{ video.dislike_count }}</td>
+    <td>{{ video.favorite_count }}</td>
+    <td>{{ video.like_count }}</td>
+    <td>{{ video.view_count }}</td>
+    </tr>
+</table>
+{% endblock %}
